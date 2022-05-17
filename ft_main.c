@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edos-san <edos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 15:29:37 by edos-san          #+#    #+#             */
-/*   Updated: 2022/05/16 19:10:30 by edos-san         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:04:46 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "headers/ft_pipex.h"
+#include <ft_pipex.h>
 
 t_pipex	*data(void)
 {
@@ -48,9 +48,9 @@ void	printf_cmd(t_command **c)
 		while (*temp)
 			printf("%s ", *temp++);
 		printf("\n");
-	}	
+	}
 	else
-		printf("commands: %s\n", NULL);
+		printf("commands: %s\n", "command error\n");
 }
 
 // -fsanitize=address -g

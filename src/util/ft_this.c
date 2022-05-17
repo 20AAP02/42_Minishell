@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_this.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edos-san <edos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 00:06:50 by edos-san          #+#    #+#             */
-/*   Updated: 2022/05/01 00:32:33 by edos-san         ###   ########.fr       */
+/*   Updated: 2022/05/17 12:44:21 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/ft_this.h"
+#include <ft_this.h>
 
 t_this	*this(void)
 {

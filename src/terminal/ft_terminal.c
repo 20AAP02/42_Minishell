@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_terminal.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edos-san <edos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 23:39:34 by edos-san          #+#    #+#             */
-/*   Updated: 2022/05/16 19:25:58 by edos-san         ###   ########.fr       */
+/*   Updated: 2022/05/17 12:43:50 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/ft_pipex.h"
+#include <ft_pipex.h>
 
 static void	execute(t_terminal	*t, char	*line)
 {

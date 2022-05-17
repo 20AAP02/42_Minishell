@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_list.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edos-san <edos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 22:26:36 by edos-san          #+#    #+#             */
-/*   Updated: 2022/05/01 15:54:50 by edos-san         ###   ########.fr       */
+/*   Updated: 2022/05/17 12:46:06 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../headers/ft_pipex.h"
+#include <ft_pipex.h>
 
 t_list_cmd	*list(t_list_cmd *t)
 {

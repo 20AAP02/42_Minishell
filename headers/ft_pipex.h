@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pipex.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edos-san <edos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 20:38:14 by edos-san          #+#    #+#             */
-/*   Updated: 2022/05/01 17:15:30 by edos-san         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:41:23 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@
 # include <signal.h>
 # include <stdarg.h>
 # include <stdlib.h>
-# include "ft_command.h"
-# include "ft_string.h"
-# include "ft_terminal.h"
-# include "ft_this.h"
-# include "ft_read_line.h"
+# include <ft_command.h>
+# include <ft_string.h>
+# include <ft_terminal.h>
+# include <ft_this.h>
+# include <ft_read_line.h>
 
 # define FD_WRITE_O 1
 # define FD_READ_O 0

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_console.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edos-san <edos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 17:43:32 by edos-san          #+#    #+#             */
-/*   Updated: 2022/05/16 19:56:06 by edos-san         ###   ########.fr       */
+/*   Updated: 2022/05/17 12:42:32 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/ft_pipex.h"
+#include <ft_pipex.h>
 
 static int	*input(int fd[2])
 {

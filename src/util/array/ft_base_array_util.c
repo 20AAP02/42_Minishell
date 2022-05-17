@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../headers/ft_base_array.h"
-#include "../../../headers/ft_this.h"
+#include <ft_base_array.h>
+#include <ft_this.h>
 
 static t_element	*base_add_element(void *value)
 {

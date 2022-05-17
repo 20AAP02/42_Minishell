@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_read_line.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edos-san <edos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 00:24:24 by edos-san          #+#    #+#             */
-/*   Updated: 2022/05/01 01:17:01 by edos-san         ###   ########.fr       */
+/*   Updated: 2022/05/17 12:43:28 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/ft_pipex.h"
+#include <ft_pipex.h>
 
 char	*read_line(t_terminal *t)
 {

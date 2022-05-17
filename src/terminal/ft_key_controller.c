@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_key_controller.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edos-san <edos-san@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 17:03:52 by edos-san          #+#    #+#             */
-/*   Updated: 2022/05/16 19:12:45 by edos-san         ###   ########.fr       */
+/*   Updated: 2022/05/17 14:22:28 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/ft_pipex.h"
-#include "../../headers/ft_this.h"
+#include <ft_pipex.h>
+#include <ft_this.h>
 
 static void	server_list(int signo, siginfo_t *i, void *context)
 {
@@ -20,6 +20,11 @@ static void	server_list(int signo, siginfo_t *i, void *context)
 	printf("signo: %i\n", signo);
 	if (signo == SIGINT)
 		exit(0);
+	if (signo == SIGSEGV)
+	{
+		write(1, "seg fault SEU VIADO\n", 20);
+		exit(0);
+	}
 }
 
 void	init_keys(void)
@@ -29,7 +34,7 @@ void	init_keys(void)
 	sigset_t			block_mask;
 
 	(void) id;
-	sigemptyset (&block_mask);
+	sigemptyset(&block_mask);
 	usr_action.sa_mask = block_mask;
 	sigaddset(&usr_action.sa_mask, SIGUSR1);
 	sigaddset(&usr_action.sa_mask, SIGUSR2);
@@ -37,6 +42,8 @@ void	init_keys(void)
 	usr_action.sa_sigaction = server_list;
 	sigaction(SIGQUIT, &usr_action, NULL);
 	sigaction(SIGINT, &usr_action, NULL);
+	// teste
+	sigaction(SIGSEGV, &usr_action, NULL);
 	id = getpid ();
 	printf ("init_keys: %i\n", id);
 }
