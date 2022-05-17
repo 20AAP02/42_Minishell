@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_key_controller.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: amaria-m <amaria-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 17:03:52 by edos-san          #+#    #+#             */
-/*   Updated: 2022/05/17 14:22:28 by amaria-m         ###   ########.fr       */
+/*   Updated: 2022/05/17 15:38:47 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ void	init_keys(void)
 	sigaction(SIGINT, &usr_action, NULL);
 	// teste
 	sigaction(SIGSEGV, &usr_action, NULL);
-	id = getpid ();
-	printf ("init_keys: %i\n", id);
+	id = getpid();
+	printf("init_keys: %i\n", id);
 }

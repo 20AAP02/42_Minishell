@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: amaria-m <amaria-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 15:29:37 by edos-san          #+#    #+#             */
-/*   Updated: 2022/05/17 13:04:46 by amaria-m         ###   ########.fr       */
+/*   Updated: 2022/05/17 16:36:48 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,13 @@ int	main(int argc, char **argv, char **envp)
 	data()->envp = envp;
 	data()->teste = 1;
 	data()->pid_base = 100;
+	// cria uma ligacao para os sinais (SIGINT, SIG...etc) (so nao percebi a parte do SIGUSR1 e do SIGUSR2)
 	init_keys();
+
+	// cria as t_array's para o qual a variavel 'this' fica a apontar
 	new_read_line();
+	
+	// bla bla
 	t = new_terminal("bash-3.2$ ");
 	t->input();
 }

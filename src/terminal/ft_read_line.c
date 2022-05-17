@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_read_line.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: amaria-m <amaria-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 00:24:24 by edos-san          #+#    #+#             */
-/*   Updated: 2022/05/17 12:43:28 by amaria-m         ###   ########.fr       */
+/*   Updated: 2022/05/17 16:36:42 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ t_read	*new_read_line(void)
 		return (0);
 	r->history = new_array();
 	r->lines = new_array();
+	// this()->array fica a apontar para o r->lines
 	this()->read = r;
+	// this()->read fica a apontar para o "t_read r"
 	return (r);
 }
