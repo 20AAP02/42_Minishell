@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_terminal.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaria-m <amaria-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 17:50:38 by amaria-m          #+#    #+#             */
-/*   Updated: 2022/05/17 19:53:54 by amaria-m         ###   ########.fr       */
+/*   Updated: 2022/05/18 21:09:21 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,28 @@ static char	*ft_display_prompt(char *line)
 			free(line);
 		line = mem;
 	}
-	//write(1, line, 5);
-	//write(1, "\n", 1);
 	return (line);
+}
+
+static void	ft_read_command(char *cmd)
+{
+	char	**cmds;
+	int		i;
+
+	cmds = ft_split(cmd, ' ');
+	i = 0;
+	while (cmds[i])
+	{
+		printf("%s\n", cmds[i]);
+		i++;
+	}
+	i = 0;
+	while (cmds[i])
+	{
+		free(cmds[i]);
+		i++;
+	}
+	free(cmds);
 }
 
 int	ft_new_terminal()
@@ -79,6 +98,7 @@ int	ft_new_terminal()
 	{
 		write(1, "bash-3.2$ ", 10);
 		command_line = ft_display_prompt(command_line);
+		ft_read_command(command_line);
 		if (command_line && *command_line)
 			free(command_line);
 	}
