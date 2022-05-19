@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_terminal.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: amaria-m <amaria-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 23:39:34 by edos-san          #+#    #+#             */
-/*   Updated: 2022/05/19 11:25:26 by amaria-m         ###   ########.fr       */
+/*   Updated: 2022/05/19 16:56:02 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ static void	ft_input(void)
 	while (1)
 	{
 		line = read_line(t);
-		if (*line == 0)
-			execute(t, "exit");
+		//if (*line == 0)
+		//	execute(t, "exit");
 		execute(t, line);
 	}
 }
