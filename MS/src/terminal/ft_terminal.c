@@ -6,7 +6,7 @@
 /*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 17:50:38 by amaria-m          #+#    #+#             */
-/*   Updated: 2022/05/18 21:09:21 by amaria-m         ###   ########.fr       */
+/*   Updated: 2022/05/19 13:30:50 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,25 +67,48 @@ static char	*ft_display_prompt(char *line)
 	return (line);
 }
 
+static void	ft_free_matrix(char **matrix)
+{
+	int	i;
+
+	i = 0;
+	while (matrix && matrix[i])
+	{
+		free(matrix[i]);
+		i++;
+	}
+	if (matrix)
+		free(matrix);
+}
+
+static int	execute(char **cmd)
+{
+	//int	pit;
+	//int fd[2];
+	
+	if (execve(getenv("PATH"), cmd, NULL) == -1)
+		write(1, "error in execve\n", 16);
+	return (0);
+}
+
 static void	ft_read_command(char *cmd)
 {
 	char	**cmds;
-	int		i;
+	//char	**command;
 
+	// ft_split retorna uma array de strings com todos os commandos (exemplo: ls -l && cat file.c)
 	cmds = ft_split(cmd, ' ');
-	i = 0;
-	while (cmds[i])
+	while (cmds && *cmds)
 	{
-		printf("%s\n", cmds[i]);
-		i++;
+		// ft_get_cmd retorna uma array de string em que só estao os commandos que têm que funcionar juntos (exemplo: ls -l)
+		//command = ft_get_cmd(cmds);
+		// ft_del_cmd vai retornar uma array de strings mas sem os commandos que estão em command (cmds - command)
+		//cmds = ft_del_cmd(cmds, command);
+		// execute vai executar um grupo de comandos
+		execute(cmds);
+		ft_free_matrix(cmds);
+		cmds = NULL;
 	}
-	i = 0;
-	while (cmds[i])
-	{
-		free(cmds[i]);
-		i++;
-	}
-	free(cmds);
 }
 
 int	ft_new_terminal()

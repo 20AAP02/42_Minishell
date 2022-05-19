@@ -6,7 +6,7 @@
 /*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 20:38:14 by edos-san          #+#    #+#             */
-/*   Updated: 2022/05/18 21:05:17 by amaria-m         ###   ########.fr       */
+/*   Updated: 2022/05/19 10:58:08 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@
 # include <signal.h>
 # include <stdarg.h>
 # include <stdlib.h>
-# include <readline/readline.h>
-# include <readline/history.h>
 
 void	ft_handler(int sig);
 void	init_keys(void);

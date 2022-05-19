@@ -6,7 +6,7 @@
 /*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 15:37:07 by edos-san          #+#    #+#             */
-/*   Updated: 2022/05/17 12:42:14 by amaria-m         ###   ########.fr       */
+/*   Updated: 2022/05/19 13:04:56 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,8 @@ static void	init(char *arg, char **envp)
 	if (!this()->list || !this()->list->this)
 		return ;
 	c = this()->list->this;
-		i = -1;
+	i = -1;
+	// ja existe uma funcao que devolve a variavel PATH (getenv("PATH"))
 	while (envp[++i] && !string().contains(path, "PATH="))
 		path = envp[i];
 	c->commands = string().split(arg, ' ', 0, NULL);

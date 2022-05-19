@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaria-m <amaria-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaria-m <amaria-m@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 17:12:15 by amaria-m          #+#    #+#             */
-/*   Updated: 2022/05/17 18:51:08 by amaria-m         ###   ########.fr       */
+/*   Updated: 2022/05/19 12:59:16 by amaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ int	main(int argc, char **argv)
 	
 	init_keys();
 	ft_new_terminal();
+	//printf("%s\n", getenv("PATH"));
 	return (0);
 }
