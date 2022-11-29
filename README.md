@@ -15,9 +15,6 @@
 
 ----
 
-<h4>Subject</h4>
-https://github.com/20AAP02/42_cub3d/blob/main/Subject.pdf
-<br>
 <h4>Grade : 100%</h4>
 <h6>Mandatory : 100/100</h6>
 <h6>Bonus : 0/25</h6>
